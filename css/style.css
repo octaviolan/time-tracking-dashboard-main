@@ -17,6 +17,7 @@
   --desaturated-blue: hsl(235, 45%, 61%);
   --pale-blue: hsl(236, 100%, 87%);
   --white: white; 
+  --card-hover: hsl(236, 40%, 34%);
 
   /* Typography */
   --font-family: "Rubik", sans-serif;
@@ -35,6 +36,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  max-width: 1110px;
 }
 
 .dashboard-profile {
@@ -73,6 +75,7 @@ body {
 }
 
 .user-report {
+  display: block;
   font-size: 15px;
   font-weight: 400;
   color: var(--pale-blue);
@@ -104,6 +107,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+ 
+}
+
+.card {
+  min-width: 255px;
 }
 
 .card-background {
@@ -111,7 +119,6 @@ body {
   align-items: end;
   min-height: 160px;
   border-radius: 15px;
-  background-color: yellow;
 }
 
 .card:nth-of-type(1) > div {
@@ -167,6 +174,12 @@ body {
   background-color: var(--dark-blue);
 }
 
+.card-container:hover {
+  background-color: var(--card-hover);
+  cursor: pointer;
+
+}
+
 .card-content {
   display: flex;
   justify-content: space-between;
@@ -189,6 +202,77 @@ body {
   font-size: 15px;
   font-weight: 400;
   color: var(--pale-blue);
+}
+
+@media screen and (min-width: 1110px) {
+  body {
+    min-height: 100vh;
+    padding: 0;
+    display: grid;
+    place-items: center;
+  }
+  .main {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .dashboard-profile {
+    max-width: 255px;
+  }
+
+  .dashboard-activities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .user {
+    /* padding: 37px 32px; */
+    flex-direction: column;
+    gap: 35px;
+    
+  }
+
+  .user-img {
+    align-self: flex-start;
+  }
+
+  .user-name{
+    font-size: 43px;
+    line-height: 42px;
+  }
+
+  .stats {
+    padding: 32px;
+    padding-top: 26px;
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  .card {
+    display: flex;
+  }
+
+  .card-background {
+    flex: 1;
+  }
+
+  .card-container {
+    padding: 29px;
+    padding-bottom: 32px;
+    gap: 24px;
+  }
+
+  .card-content:last-child {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .card-current {
+    font-size: 56px;
+  }
+
 }
 
 
