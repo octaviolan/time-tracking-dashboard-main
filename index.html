@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/style.css" type="text/css">
   <title>Time tracking dashboard</title>
 </head>
@@ -18,9 +19,9 @@
         <h2 class="user-name"><span class="user-report">Report for</span> Jeremy Robson</h2>
       </div>
       <ul class="stats">
-        <li class="stats-item">Daily</li>
-        <li class="stats-item stats-item--active">Weekly</li>
-        <li class="stats-item">Monthly</li>
+        <li class="stats-item" id="daily">Daily</li>
+        <li class="stats-item stats-item--active" id="weekly">Weekly</li>
+        <li class="stats-item" id="monthly">Monthly</li>
       </ul>
     </section>
 
@@ -32,7 +33,7 @@
           <div class="card-container">
             <div class="card-content">
               <h4 class="card-title">Work</h4>
-              <img src="./images/icon-ellipsis.svg" alt="Icon Ellipsis" class="card-icon">
+              <i class="fa-solid fa-ellipsis"></i>
             </div>
             <div class="card-content">
               <h3 class="card-current">32hrs</h3>
@@ -47,7 +48,7 @@
           <div class="card-container">
             <div class="card-content">
               <h4 class="card-title">Play</h4>
-              <img src="./images/icon-ellipsis.svg" alt="Icon Ellipsis" class="card-icon">
+              <i class="fa-solid fa-ellipsis"></i>
             </div>
             <div class="card-content">
               <h3 class="card-current">10hrs</h3>
@@ -62,7 +63,7 @@
           <div class="card-container">
             <div class="card-content">
               <h4 class="card-title">Study</h4>
-              <img src="./images/icon-ellipsis.svg" alt="Icon Ellipsis" class="card-icon">
+              <i class="fa-solid fa-ellipsis"></i>
             </div>
             <div class="card-content">
               <h3 class="card-current">4hrs</h3>
@@ -77,7 +78,7 @@
           <div class="card-container">
             <div class="card-content">
               <h4 class="card-title">Exercise</h4>
-              <img src="./images/icon-ellipsis.svg" alt="Icon Ellipsis" class="card-icon">
+              <i class="fa-solid fa-ellipsis"></i>
             </div>
             <div class="card-content">
               <h3 class="card-current">4hrs</h3>
@@ -92,7 +93,7 @@
           <div class="card-container">
             <div class="card-content">
               <h4 class="card-title">Social</h4>
-              <img src="./images/icon-ellipsis.svg" alt="Icon Ellipsis" class="card-icon">
+              <i class="fa-solid fa-ellipsis"></i>
             </div>
             <div class="card-content">
               <h3 class="card-current">5hrs</h3>
@@ -107,7 +108,7 @@
           <div class="card-container">
             <div class="card-content">
               <h4 class="card-title">Self Care</h4>
-              <img src="./images/icon-ellipsis.svg" alt="Icon Ellipsis" class="card-icon">
+              <i class="fa-solid fa-ellipsis"></i>
             </div>
             <div class="card-content">
               <h3 class="card-current">2hrs</h3>
@@ -119,5 +120,6 @@
     </section> 
   </main>
 
+  <script src="./js/app.js"></script>
 </body>
 </html>

@@ -191,6 +191,14 @@ body {
   font-weight: 500;
 }
 
+.fa-ellipsis {
+  color: var(--pale-blue);
+}
+
+.fa-ellipsis:hover {
+  color: var(--white);
+}
+
 .card-current {
   margin: 0;
   font-size: 32px;
