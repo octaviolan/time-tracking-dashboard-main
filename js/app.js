@@ -26,7 +26,7 @@ function showStats(obj) {
 
 // Obtener datos del JSON
 function getData(type) {
-  const url = "https://github.com/octaviolan/time-tracking-dashboard-main/blob/main/data.json";
+  const url = "../data.json";
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
