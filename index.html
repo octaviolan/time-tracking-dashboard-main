@@ -1,126 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/style.css" type="text/css">
-  <title>Time tracking dashboard</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <title>Time tracking dashboard</title>
+  </head>
+  <body>
+    <!-- Dashboard -->
+    <main class="main">
+      <!-- Profile -->
+      <section class="dashboard-profile">
+        <div class="user">
+          <img
+            src="./images/image-jeremy.png"
+            alt="Image User"
+            class="user-img"
+          />
+          <h2 class="user-name">
+            <span class="user-report">Report for</span> Jeremy Robson
+          </h2>
+        </div>
+        <ul class="stats">
+          <li class="stats-item" id="daily">Daily</li>
+          <li class="stats-item stats-item--active" id="weekly">Weekly</li>
+          <li class="stats-item" id="monthly">Monthly</li>
+        </ul>
+      </section>
 
-  <!-- Dashboard -->
-  <main class="main">
-    <!-- Profile -->
-    <section class="dashboard-profile">
-      <div class="user">
-        <img src="./images/image-jeremy.png" alt="Image User" class="user-img">
-        <h2 class="user-name"><span class="user-report">Report for</span> Jeremy Robson</h2>
-      </div>
-      <ul class="stats">
-        <li class="stats-item" id="daily">Daily</li>
-        <li class="stats-item stats-item--active" id="weekly">Weekly</li>
-        <li class="stats-item" id="monthly">Monthly</li>
-      </ul>
-    </section>
+      <!-- Activities -->
+      <section class="dashboard-activities">
+        <!-- Work -->
+        <article class="card">
+          <div class="card-background">
+            <div class="card-container">
+              <div class="card-content">
+                <h4 class="card-title">Work</h4>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+              <div class="card-content">
+                <h3 class="card-current">32hrs</h3>
+                <p class="card-previous">Last Week - 36hrs</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Play -->
+        <article class="card">
+          <div class="card-background">
+            <div class="card-container">
+              <div class="card-content">
+                <h4 class="card-title">Play</h4>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+              <div class="card-content">
+                <h3 class="card-current">10hrs</h3>
+                <p class="card-previous">Last Week - 36hrs</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Study -->
+        <article class="card">
+          <div class="card-background">
+            <div class="card-container">
+              <div class="card-content">
+                <h4 class="card-title">Study</h4>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+              <div class="card-content">
+                <h3 class="card-current">4hrs</h3>
+                <p class="card-previous">Last Week - 7hrs</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Exercise -->
+        <article class="card">
+          <div class="card-background">
+            <div class="card-container">
+              <div class="card-content">
+                <h4 class="card-title">Exercise</h4>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+              <div class="card-content">
+                <h3 class="card-current">4hrs</h3>
+                <p class="card-previous">Last Week - 5hrs</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Social -->
+        <article class="card">
+          <div class="card-background">
+            <div class="card-container">
+              <div class="card-content">
+                <h4 class="card-title">Social</h4>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+              <div class="card-content">
+                <h3 class="card-current">5hrs</h3>
+                <p class="card-previous">Last Week - 10hrs</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Self Care -->
+        <article class="card">
+          <div class="card-background">
+            <div class="card-container">
+              <div class="card-content">
+                <h4 class="card-title">Self Care</h4>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+              <div class="card-content">
+                <h3 class="card-current">2hrs</h3>
+                <p class="card-previous">Last Week - 2hrs</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
 
-    <!-- Activities -->
-    <section class="dashboard-activities">
-      <!-- Work -->
-      <article class="card">
-        <div class="card-background">
-          <div class="card-container">
-            <div class="card-content">
-              <h4 class="card-title">Work</h4>
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-            <div class="card-content">
-              <h3 class="card-current">32hrs</h3>
-              <p class="card-previous">Last Week - 36hrs</p>
-            </div>
-          </div>
-        </div>
-      </article>
-      <!-- Play -->
-      <article class="card">
-        <div class="card-background">
-          <div class="card-container">
-            <div class="card-content">
-              <h4 class="card-title">Play</h4>
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-            <div class="card-content">
-              <h3 class="card-current">10hrs</h3>
-              <p class="card-previous">Last Week - 36hrs</p>
-            </div>
-          </div>
-        </div>
-      </article>
-      <!-- Study -->
-      <article class="card">
-        <div class="card-background">
-          <div class="card-container">
-            <div class="card-content">
-              <h4 class="card-title">Study</h4>
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-            <div class="card-content">
-              <h3 class="card-current">4hrs</h3>
-              <p class="card-previous">Last Week - 7hrs</p>
-            </div>
-          </div>
-        </div>
-      </article>
-      <!-- Exercise -->
-      <article class="card">
-        <div class="card-background">
-          <div class="card-container">
-            <div class="card-content">
-              <h4 class="card-title">Exercise</h4>
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-            <div class="card-content">
-              <h3 class="card-current">4hrs</h3>
-              <p class="card-previous">Last Week - 5hrs</p>
-            </div>
-          </div>
-        </div>
-      </article>
-      <!-- Social -->
-      <article class="card">
-        <div class="card-background">
-          <div class="card-container">
-            <div class="card-content">
-              <h4 class="card-title">Social</h4>
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-            <div class="card-content">
-              <h3 class="card-current">5hrs</h3>
-              <p class="card-previous">Last Week - 10hrs</p>
-            </div>
-          </div>
-        </div>
-      </article>
-      <!-- Self Care -->
-      <article class="card">
-        <div class="card-background">
-          <div class="card-container">
-            <div class="card-content">
-              <h4 class="card-title">Self Care</h4>
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-            <div class="card-content">
-              <h3 class="card-current">2hrs</h3>
-              <p class="card-previous">Last Week - 2hrs</p>
-            </div>
-          </div>
-        </div>
-      </article>
-    </section> 
-  </main>
-
-  <script src="./data.json"></script>
-  <script src="./js/app.js"></script>
-</body>
+    <script src="./data.json"></script>
+    <script src="./js/app.js"></script>
+  </body>
 </html>

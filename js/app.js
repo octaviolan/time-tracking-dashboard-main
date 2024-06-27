@@ -1,8 +1,9 @@
 //Mostrar los datos en el DOM
 function showStats(obj) {
   const activities = document.querySelector(".dashboard-activities");
-  const cards = obj.map(card => {
-    return `
+  const cards = obj
+    .map((card) => {
+      return `
       <article class="card">
         <div class="card-background">
           <div class="card-container">
@@ -12,13 +13,20 @@ function showStats(obj) {
             </div>
             <div class="card-content">
               <h3 class="card-current">${card.current}hrs</h3>
-              <p class="card-previous">${card.type === "daily" ? "Yesterday" : (card.type === "weekly" ? "Last Week" : "Last Month")} - ${card.previous}hrs</p>
+              <p class="card-previous">${
+                card.type === "daily"
+                  ? "Yesterday"
+                  : card.type === "weekly"
+                  ? "Last Week"
+                  : "Last Month"
+              } - ${card.previous}hrs</p>
             </div>
           </div>
         </div>
       </article>  
     `;
-  }).join('')
+    })
+    .join("");
   console.log(obj);
   console.log(cards);
   activities.innerHTML = cards;
@@ -43,7 +51,6 @@ function getData(type) {
 
 //Event Listener
 document.querySelector(".stats").addEventListener("click", (e) => {
-
   //Llamar a la funcion getData dependiendo el caso
   if (e.target.id === "daily") {
     getData("daily");
