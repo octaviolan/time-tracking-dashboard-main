@@ -1,3 +1,6 @@
+import { data } from "./data.mjs";
+console.log(data);
+
 //Mostrar los datos en el DOM
 function showStats(obj) {
   const activities = document.querySelector(".dashboard-activities");
@@ -28,26 +31,22 @@ function showStats(obj) {
     })
     .join("");
   console.log(obj);
-  console.log(cards);
   activities.innerHTML = cards;
 }
 
 // Obtener datos del JSON
 function getData(type) {
-  const url = "../data.json";
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => {
+  
       const newObj = data.map((el) => ({
         type,
         title: el.title,
         current: el.timeframes[type].current,
         previous: el.timeframes[type].previous,
       }));
-      return newObj;
-    })
-    .then((obj) => showStats(obj));
-}
+
+      return showStats(newObj);
+      
+    }  
 
 //Event Listener
 document.querySelector(".stats").addEventListener("click", (e) => {
